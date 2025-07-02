@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <title>Office Employee Management System</title>
+</head>
+<body class="bg-light">
+
+  <div class="container py-5">
+    <div class="text-center mb-4">
+      <h1 class="display-5 fw-bold">🏢 Office Employee Management System</h1>
+      <p class="lead text-muted">Manage employee records effortlessly — view, add, remove, or filter employees</p>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+      <div class="col">
+        <div class="card border-primary shadow-sm h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title">📋 View All Employees</h5>
+            <p class="card-text">See the complete list of all registered employees.</p>
+            <a href="/all_emp" class="btn btn-primary">View Employees</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card border-success shadow-sm h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title">➕ Add an Employee</h5>
+            <p class="card-text">Register a new employee with basic details.</p>
+            <a href="/add_emp" class="btn btn-success">Add Employee</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card border-danger shadow-sm h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title">❌ Remove Employee</h5>
+            <p class="card-text">Select and remove an employee from the system.</p>
+            <a href="/remove_emp" class="btn btn-danger">Remove Employee</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card border-warning shadow-sm h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title">🔍 Filter Employees</h5>
+            <p class="card-text">Search employees by name, department or role.</p>
+            <a href="/filter_emp" class="btn btn-warning text-white">Filter Employees</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<footer class="bg-dark text-white text-center py-3 mt-auto">
+    Code by Ankur
+  </footer>
+</body>
+</html>

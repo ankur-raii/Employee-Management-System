@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Filter Employee</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body class="bg-light">
+
+  <div class="container py-5">
+    <div class="card shadow-sm p-4">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h3 class="mb-0">🔍 Filter Employee Details</h3>
+        <a href="/" class="btn btn-success">🏠 Home</a>
+      </div>
+      <hr>
+
+      <form action="/filter_emp" method="post">
+        {% csrf_token %}
+
+        <div class="mb-3">
+          <label for="name" class="form-label">Employee First/Last Name</label>
+          <input type="text" class="form-control" id="name" name="name" value="{{ name }}">
+        </div>
+
+        <div class="mb-3">
+          <label for="dept" class="form-label">Department</label>
+          <input type="text" class="form-control" id="dept" name="dept" value="{{ dept }}">
+        </div>
+
+        <div class="mb-3">
+          <label for="role" class="form-label">Role</label>
+          <input type="text" class="form-control" id="role" name="role" value="{{ role }}">
+        </div>
+
+        <div class="d-grid">
+          <button type="submit" class="btn btn-primary">🔎 Search</button>
+        </div>
+      </form>
+    </div>
+  </div>
+<footer class="bg-dark text-white text-center py-3 mt-auto">
+    Code by Ankur
+  </footer>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Remove Employee</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body class="bg-light">
+
+  <div class="container py-5">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h3 class="mb-0">🗑️ Remove an Employee</h3>
+          <a href="/" class="btn btn-success">🏠 Home</a>
+        </div>
+        <hr>
+
+        {% if emps %}
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Select Employee to Remove
+          </button>
+          <ul class="dropdown-menu mt-1 shadow-sm">
+            {% for emp in emps %}
+              <li>
+                <a class="dropdown-item" href="/remove_emp/{{ emp.id }}">
+                  {{ emp.first_name }} {{ emp.last_name }} 📞 {{ emp.phone }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% else %}
+        <p class="text-muted">No employees found to remove.</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+<footer class="bg-dark text-white text-center py-3 mt-auto">
+    Code by Ankur
+  </footer>
+  <!-- ✅ Bootstrap JS (MUST come after content) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
