@@ -8,6 +8,6 @@ services:
       pip install -r ../requirements.txt
       python manage.py migrate --no-input
       python manage.py collectstatic --no-input
-    startCommand: gunicorn office_emp_proj.office_emp_proj.wsgi:application --bind 0.0.0.0:$PORT
+    startCommand: gunicorn office_emp_proj.wsgi:application --bind 0.0.0.0:$PORT
 
     autoDeploy: true
