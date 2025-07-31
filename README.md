@@ -15,6 +15,13 @@ A web-based **Employee Management System** built using the Django framework. Thi
 
 ---
 
+## 🚀 Live Demo
+
+👉 Hosted on **Render**:  
+[🔗 Click here to see the live site](https://employee-management-system-lv1p.onrender.com/)  
+
+---
+
 ## 🚀 Setup Instructions
 
 ### 1. Clone the Repository
